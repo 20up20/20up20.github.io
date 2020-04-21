@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="变量新建一个 Python文件（以 .py为扩展名的文件）然后使用编辑器输入如下代码（使用英文输入） 12msg &#x3D; &quot;Hello,World!&quot; print(msg) 保存后运行这个程序 1Hello,World! 在这个程序里面我们添加了一个名为 msg 的变量，并将 ”Hello,World!“ 通过赋值符号 &#x3D; 赋值给了 msg 这个变量，所以在这里 msg 存储的值为文本 ”Hello,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python数据类型">
+<meta property="og:url" content="http://yoursite.com/2020/04/21/%E5%8F%98%E9%87%8F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="变量新建一个 Python文件（以 .py为扩展名的文件）然后使用编辑器输入如下代码（使用英文输入） 12msg &#x3D; &quot;Hello,World!&quot; print(msg) 保存后运行这个程序 1Hello,World! 在这个程序里面我们添加了一个名为 msg 的变量，并将 ”Hello,World!“ 通过赋值符号 &#x3D; 赋值给了 msg 这个变量，所以在这里 msg 存储的值为文本 ”Hello,">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-21T08:52:46.000Z">
+<meta property="article:modified_time" content="2020-04-21T09:33:21.151Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/04/21/%E5%8F%98%E9%87%8F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>python数据类型 | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/%E5%8F%98%E9%87%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          python数据类型
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-04-21 16:52:46 / Modified: 17:33:21" itemprop="dateCreated datePublished" datetime="2020-04-21T16:52:46+08:00">2020-04-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>新建一个 Python文件（以 .py为扩展名的文件）然后使用编辑器输入如下代码（使用英文输入）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msg = <span class="string">"Hello,World!"</span> </span><br><span class="line">print(msg)</span><br></pre></td></tr></table></figure>
+<p>保存后运行这个程序</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello,World!</span><br></pre></td></tr></table></figure>
+<p>在这个程序里面我们添加了一个名为 msg 的变量，并将 ”Hello,World!“ 通过赋值符号 = 赋值给了 msg 这个变量，<br>所以在这里 msg 存储的值为文本 ”Hello,World!“<br>变量来源于数学，是计算机语言中能储存计算结果或能表示值抽象概念。变量可以通过变量名访问。<br>在程序设计中，变量是一种存储数据的载体。计算机中的变量是实际存在的数据或者说是存储器中存储数据的一块内存空间，变量的值可以被读取和修改，这是所有计算和控制的基础。</p>
+<h3 id="定义变量："><a href="#定义变量：" class="headerlink" title="定义变量："></a>定义变量：</h3><p>name = Value</p>
+<h3 id="变量的三个特征："><a href="#变量的三个特征：" class="headerlink" title="变量的三个特征："></a>变量的三个特征：</h3><h4 id="1、变量名：变量名用来引用变量值的。即但凡要用变量值，都需要通过变量名。"><a href="#1、变量名：变量名用来引用变量值的。即但凡要用变量值，都需要通过变量名。" class="headerlink" title="1、变量名：变量名用来引用变量值的。即但凡要用变量值，都需要通过变量名。"></a>1、变量名：变量名用来引用变量值的。即但凡要用变量值，都需要通过变量名。</h4><h4 id="2、赋值符号：赋值，在编程语言中-”-“-一般表示赋值符号，即将-”-“-左边的值赋值给右边的变量。"><a href="#2、赋值符号：赋值，在编程语言中-”-“-一般表示赋值符号，即将-”-“-左边的值赋值给右边的变量。" class="headerlink" title="2、赋值符号：赋值，在编程语言中 ”=“ 一般表示赋值符号，即将 ”=“ 左边的值赋值给右边的变量。"></a>2、赋值符号：赋值，在编程语言中 ”=“ 一般表示赋值符号，即将 ”=“ 左边的值赋值给右边的变量。</h4><h4 id="3、变量值：即我们存放的数据，是用来记录现实世界中的某种状态的。"><a href="#3、变量值：即我们存放的数据，是用来记录现实世界中的某种状态的。" class="headerlink" title="3、变量值：即我们存放的数据，是用来记录现实世界中的某种状态的。"></a>3、变量值：即我们存放的数据，是用来记录现实世界中的某种状态的。</h4><p>在程序中，变量的值可以随时修改，而 Python 则会记住最新的值。</p>
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>在 Python 中使用变量时，需要遵守一些规则和指南。违反这些规则将引发错误，而指南旨在让你编写的代码更容易<br>阅读和理解。</p>
+<h4 id="请务必牢记下述有关变量的规则。"><a href="#请务必牢记下述有关变量的规则。" class="headerlink" title="请务必牢记下述有关变量的规则。"></a>请务必牢记下述有关变量的规则。</h4><h5 id="变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头"><a href="#变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头" class="headerlink" title="变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头"></a>变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头</h5><h5 id="变量名不能包含空格，但可使用下划线来分隔其中的单词。"><a href="#变量名不能包含空格，但可使用下划线来分隔其中的单词。" class="headerlink" title="变量名不能包含空格，但可使用下划线来分隔其中的单词。"></a>变量名不能包含空格，但可使用下划线来分隔其中的单词。</h5><h5 id="不要将-Python-关键字和函数名用作变量名，即不要使用-Python-保留用于特殊用途的单词，如-print-。"><a href="#不要将-Python-关键字和函数名用作变量名，即不要使用-Python-保留用于特殊用途的单词，如-print-。" class="headerlink" title="不要将 Python 关键字和函数名用作变量名，即不要使用 Python 保留用于特殊用途的单词，如 print 。"></a>不要将 Python 关键字和函数名用作变量名，即不要使用 Python 保留用于特殊用途的单词，如 print 。</h5><h5 id="变量名应既简短又具有描述性。"><a href="#变量名应既简短又具有描述性。" class="headerlink" title="变量名应既简短又具有描述性。"></a>变量名应既简短又具有描述性。</h5><h5 id="慎用小写字母-l-和大写字母-O，因为它们可能被人错看成数字-1-和-0。"><a href="#慎用小写字母-l-和大写字母-O，因为它们可能被人错看成数字-1-和-0。" class="headerlink" title="慎用小写字母 l 和大写字母 O，因为它们可能被人错看成数字 1 和 0。"></a>慎用小写字母 l 和大写字母 O，因为它们可能被人错看成数字 1 和 0。</h5><p>在交互模式下输入下面的代码来查看 Python 的关键字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">help(<span class="string">"keywords"</span>)</span><br></pre></td></tr></table></figure>
+<p>要查看 Python 中的内置函数也只需要在交互模式下输入一行代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir(__builtins__)</span><br></pre></td></tr></table></figure>
+<h3 id="多元赋值"><a href="#多元赋值" class="headerlink" title="多元赋值"></a>多元赋值</h3><p>将多个变量同时赋值的方法我们称为多元赋值（multuple)。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b, c = <span class="number">1</span>, <span class="number">2</span>, <span class="string">"abc"</span></span><br></pre></td></tr></table></figure>
+<p>注意：采用这种方法赋值的时候，等号两边的对象都是元组。</p>
+<h3 id="多重赋值"><a href="#多重赋值" class="headerlink" title="多重赋值"></a>多重赋值</h3><p>Python语言可以多重赋值，就是多个变量拥有相同的值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = b = c = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>这条语句用于将1装入a，b，c三个变量中。</p>
+<p>多元赋值和多重赋值在实际开发中不建议使用。</p>
+<h3 id="交换值"><a href="#交换值" class="headerlink" title="交换值"></a>交换值</h3><p>Python中交换两个变量的值不需要中间变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span> </span><br><span class="line">b = <span class="number">20</span> </span><br><span class="line">a, b = b, a</span><br></pre></td></tr></table></figure>
+<h3 id="type函数"><a href="#type函数" class="headerlink" title="type函数"></a>type函数</h3><p>每个变量都是有自己的类型的，在Python中要查看变量的类型需要使用 type 函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(变量名)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/21/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%9F%BA%E7%A1%80/" rel="prev" title="正则表达式基础">
+      <i class="fa fa-chevron-left"></i> 正则表达式基础
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">1.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义变量："><span class="nav-number">1.1.</span> <span class="nav-text">定义变量：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的三个特征："><span class="nav-number">1.2.</span> <span class="nav-text">变量的三个特征：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、变量名：变量名用来引用变量值的。即但凡要用变量值，都需要通过变量名。"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、变量名：变量名用来引用变量值的。即但凡要用变量值，都需要通过变量名。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、赋值符号：赋值，在编程语言中-”-“-一般表示赋值符号，即将-”-“-左边的值赋值给右边的变量。"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、赋值符号：赋值，在编程语言中 ”&#x3D;“ 一般表示赋值符号，即将 ”&#x3D;“ 左边的值赋值给右边的变量。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、变量值：即我们存放的数据，是用来记录现实世界中的某种状态的。"><span class="nav-number">1.2.3.</span> <span class="nav-text">3、变量值：即我们存放的数据，是用来记录现实世界中的某种状态的。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量命名"><span class="nav-number">1.3.</span> <span class="nav-text">变量命名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请务必牢记下述有关变量的规则。"><span class="nav-number">1.3.1.</span> <span class="nav-text">请务必牢记下述有关变量的规则。</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">变量名只能包含字母、数字和下划线。变量名可以字母或下划线打头，但不能以数字打头</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#变量名不能包含空格，但可使用下划线来分隔其中的单词。"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">变量名不能包含空格，但可使用下划线来分隔其中的单词。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不要将-Python-关键字和函数名用作变量名，即不要使用-Python-保留用于特殊用途的单词，如-print-。"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">不要将 Python 关键字和函数名用作变量名，即不要使用 Python 保留用于特殊用途的单词，如 print 。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#变量名应既简短又具有描述性。"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">变量名应既简短又具有描述性。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#慎用小写字母-l-和大写字母-O，因为它们可能被人错看成数字-1-和-0。"><span class="nav-number">1.3.1.5.</span> <span class="nav-text">慎用小写字母 l 和大写字母 O，因为它们可能被人错看成数字 1 和 0。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多元赋值"><span class="nav-number">1.4.</span> <span class="nav-text">多元赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多重赋值"><span class="nav-number">1.5.</span> <span class="nav-text">多重赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交换值"><span class="nav-number">1.6.</span> <span class="nav-text">交换值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#type函数"><span class="nav-number">1.7.</span> <span class="nav-text">type函数</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/%E5%A4%B4%E5%83%8F.jpg">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
