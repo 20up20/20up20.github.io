@@ -156,6 +156,118 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/21/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">字符串类型</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-04-21 17:43:39 / Modified: 18:10:11" itemprop="dateCreated datePublished" datetime="2020-04-21T17:43:39+08:00">2020-04-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h2><p>   字符串是 Python 数据类型的一种，就是由零个或多个字符组成的有限序列，从名字我们就可以知道字符串就是一串<br>字符，在 Python 中被一对引号括起来的就是字符串，引号可以是单引号，也可以是双引号，但是必须是英文下的引号。</p>
+<p>写一个自我介绍</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">"托尼"</span> </span><br><span class="line">age = <span class="string">"20"</span> </span><br><span class="line">profession = <span class="string">"理发师"</span> </span><br><span class="line">print(<span class="string">"我的名字叫"</span> + name + <span class="string">"，我的年龄是"</span> + age + <span class="string">"，我的职业是"</span> + profession + <span class="string">"。"</span>)</span><br></pre></td></tr></table></figure>
+<p>运行代码，可以看到自我介绍已经被输出出来了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的名字叫托尼，我的年龄是<span class="number">20</span>，我的职业是理发师。</span><br></pre></td></tr></table></figure>
+<p>   上面的代码使用了字符串的拼接方法，在 Python 中要拼接字符串只需要使用加号 + 或者 , 就能将不同的字符串拼<br>接起来。</p>
+<h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><p>写一个自我介绍</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">"托尼"</span> </span><br><span class="line">age = <span class="string">"20"</span> </span><br><span class="line">profession = <span class="string">"理发师"</span> </span><br><span class="line">print(<span class="string">"我的名字叫%s，我的年龄是%s，我的职业是%s。"</span> % (name, age, profession))</span><br></pre></td></tr></table></figure>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>   我们在对变量赋值的时候赋值符号 (=) 右边的变量值如果加上引号才会是一个字符串变量，如果不加引号并且变量<br>值不是一个数字的话程序就可能报错</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>   通常使用井符号 # 将代码屏蔽掉，意思就是井号后面的内容都会被Python解释器忽略。这样的功能<br>叫 注释 。不同的编程语言，注释的标识可能不同。</p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符 \"></a>转义字符 \</h3><p>   “转义字符” 顾名思义就是能将字符意思改变的符号，转义字符 \ 可以转义很多字符，比如 \n 表示换行， \t 表示<br>制表符，字符 \ 本身也要转义，所以 \ 表示的字符就是 \ 。</p>
+<p>   如果字符串里面有很多字符都需要转义，就需要加很多 \ ，为了简化，Python还允许用 r”” 表示 “” 内部的字符串<br>默认不转义</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"I'm \\tlearning \\sPython"</span>) </span><br><span class="line">print(<span class="string">r"I'm \tlearning \sPython"</span>)</span><br></pre></td></tr></table></figure>
+<p>保存后运行代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I<span class="string">'m \tlearning \sPython </span></span><br><span class="line"><span class="string">I'</span>m \tlearning \sPython</span><br></pre></td></tr></table></figure>
+<h3 id="三重引号"><a href="#三重引号" class="headerlink" title="三重引号"></a>三重引号</h3><p>   如果字符串内部有很多换行，用 \n 写在一行里不好阅读，为了简化，Python允许用 ‘’’…’’’ 或 “””…””” 的格<br>式表示多行内容</p>
+<p>   在使用print()进行输出的时候，输出的结果总是自动换行，因为在print()函数中，有一个默认的参数 end=\n ，如果不<br>希望输出的结果直接换行，可以将这个参数改变</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello,Python"</span>, end=<span class="string">"\t"</span>) </span><br><span class="line">print(<span class="string">"Hello,World"</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="获取字符长度"><a href="#获取字符长度" class="headerlink" title="获取字符长度"></a>获取字符长度</h3><p>len() 函数获取字符串的长度，len()函数我们会经常使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello python"</span> </span><br><span class="line">print(string) </span><br><span class="line">print(<span class="string">"字符串的长度是"</span>, len(string))</span><br></pre></td></tr></table></figure>
+<h3 id="strip-删除开头或结尾空白字符"><a href="#strip-删除开头或结尾空白字符" class="headerlink" title="strip()删除开头或结尾空白字符"></a>strip()删除开头或结尾空白字符</h3><p>如果字符串的开头和结尾都有空白字符，那么都会删除</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">' helllo '</span> </span><br><span class="line">print(string.strip())</span><br></pre></td></tr></table></figure>
+<h3 id="count-获取某个字符在字符串出现的次数"><a href="#count-获取某个字符在字符串出现的次数" class="headerlink" title="count()获取某个字符在字符串出现的次数"></a>count()获取某个字符在字符串出现的次数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello python"</span> </span><br><span class="line">print(<span class="string">"字符o的次数是："</span>,string.count(<span class="string">'o'</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="replace-oldstr-newstr-字符串替换"><a href="#replace-oldstr-newstr-字符串替换" class="headerlink" title="replace(oldstr,newstr)字符串替换"></a>replace(oldstr,newstr)字符串替换</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello python"</span> </span><br><span class="line">new_str = string.replace(<span class="string">'h'</span>,<span class="string">"H"</span>) </span><br><span class="line">print(new_str)</span><br></pre></td></tr></table></figure>
+<h3 id="format-字符串格式化"><a href="#format-字符串格式化" class="headerlink" title="format()字符串格式化"></a>format()字符串格式化</h3><p>除了使用 % ，还可以使用format对字符串进行格式化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">'hello&#123;&#125;'</span> </span><br><span class="line">new_str = string.format(<span class="string">'你好'</span>) </span><br><span class="line">print(new_str)</span><br></pre></td></tr></table></figure>
+<h3 id="split-字符串的分割"><a href="#split-字符串的分割" class="headerlink" title="split()字符串的分割"></a>split()字符串的分割</h3><p>如果括号中不添加参数，那么默认以空格作为分隔符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello world"</span> </span><br><span class="line">print(string.split(<span class="string">" "</span>))</span><br></pre></td></tr></table></figure>
+<p>注意：分割字符串返回是一个列表，列表里面就是分割的字符串</p>
+<h3 id="join-连接字符串"><a href="#join-连接字符串" class="headerlink" title="join()连接字符串"></a>join()连接字符串</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello"</span></span><br><span class="line">new_str = <span class="string">'你好'</span>.join(string)</span><br><span class="line">print(new_str)</span><br></pre></td></tr></table></figure>
+<h3 id="字符串相加，字符串相乘"><a href="#字符串相加，字符串相乘" class="headerlink" title="字符串相加，字符串相乘"></a>字符串相加，字符串相乘</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"hello"</span> </span><br><span class="line">str2 = <span class="string">"world"</span> </span><br><span class="line">new_str1 = str1 + str2 </span><br><span class="line">new_str2 = str1 * <span class="number">3</span> </span><br><span class="line">print(new_str1) </span><br><span class="line">print(new_str2)</span><br></pre></td></tr></table></figure>
+<p>可以发现：字符串和字符串相加只是拼接字符串，而字符串和数字相乘则是复制三个相同的字符串</p>
+<h3 id="字符串下标"><a href="#字符串下标" class="headerlink" title="字符串下标"></a>字符串下标</h3><p>想要取出字符串中特定位置的字符，可以使用字符串的下标</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"abc1234567"</span> </span><br><span class="line">new_str = string[<span class="number">2</span>] </span><br><span class="line">print(new_str)</span><br></pre></td></tr></table></figure>
+<h3 id="字符串切片"><a href="#字符串切片" class="headerlink" title="字符串切片"></a>字符串切片</h3><p>从指定的开始索引到指定的结束索引，即：[start:end:step]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"abc1234567"</span></span><br><span class="line">print(string[<span class="number">2</span>:<span class="number">5</span>]) </span><br><span class="line">print(string[<span class="number">2</span>:]) </span><br><span class="line">print(string[<span class="number">2</span>::<span class="number">2</span>]) </span><br><span class="line">print(string[::<span class="number">2</span>]) </span><br><span class="line">print(string[::<span class="number">-1</span>]) </span><br><span class="line">print(string[<span class="number">-3</span>:<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/%E5%8F%98%E9%87%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -713,7 +825,7 @@ name | 价格 | 数量
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

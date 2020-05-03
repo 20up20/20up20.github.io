@@ -156,6 +156,70 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/python%E4%BD%9C%E4%B8%9A%E4%B8%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/04/python%E4%BD%9C%E4%B8%9A%E4%B8%89/" class="post-title-link" itemprop="url">python作业三</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-05-04 00:15:12 / Modified: 00:22:37" itemprop="dateCreated datePublished" datetime="2020-05-04T00:15:12+08:00">2020-05-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="python作业三"><a href="#python作业三" class="headerlink" title="python作业三"></a>python作业三</h2><h3 id="提取省份的超链接"><a href="#提取省份的超链接" class="headerlink" title="提取省份的超链接"></a>提取省份的超链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">html &#x3D; &quot;&quot;&quot;&lt;HTML&gt;&quot;</span><br><span class="line">&lt;HEAD&gt;</span><br><span class="line">&lt;META content&#x3D;&quot;text&#x2F;html; charset&#x3D;gb2312&quot; http-equiv&#x3D;Content-Type&gt;</span><br><span class="line">&lt;TITLE&gt;关于更新全国统计用区划代码和城乡划分代码的公告 &lt;&#x2F;TITLE&gt;</span><br><span class="line">&lt;STYLE type&#x3D;text&#x2F;css&gt;</span><br><span class="line">    BODY &#123;MARGIN: 0px&#125;BODY &#123;FONT-SIZE: 12px&#125;</span><br><span class="line">    TD &#123;FONT-SIZE: 12px&#125;</span><br><span class="line">    TH &#123;FONT-SIZE: 12px&#125;</span><br><span class="line">    .redBig &#123;COLOR: #d00018; FONT-SIZE: 18px; FONT-WEIGHT: bold&#125;</span><br><span class="line">    .STYLE3 a&#123;COLOR: #fff; text-decoration:none;&#125;</span><br><span class="line">    .STYLE5 &#123;COLOR: #236fbe; FONT-WEIGHT: bold&#125;</span><br><span class="line">    .content &#123;LINE-HEIGHT: 1.5; FONT-SIZE: 10.4pt&#125;</span><br><span class="line">    .tdPading &#123;PADDING-LEFT: 30px&#125;.blue &#123;COLOR: #0000ff&#125;</span><br><span class="line">    .STYLE6 &#123;COLOR: #ffffff&#125;</span><br><span class="line">    .a2 &#123;LINE-HEIGHT: 1.5; COLOR: #2a6fbd; FONT-SIZE: 12px&#125;</span><br><span class="line">    a2:link &#123;LINE-HEIGHT: 1.5; COLOR: #2a6fbd; FONT-SIZE: 12px&#125;</span><br><span class="line">    a2:hover &#123;LINE-HEIGHT: 1.5; COLOR: #2a6fbd; FONT-SIZE: 12px; TEXT-DECORATION: underline&#125;</span><br><span class="line">    a2:visited &#123;LINE-HEIGHT: 1.5; COLOR: #2a6fbd; FONT-SIZE: 12px&#125;</span><br><span class="line">&lt;&#x2F;STYLE&gt;</span><br><span class="line">&lt;SCRIPT language&#x3D;javascript&gt;</span><br><span class="line">function doZoom(size)&#123;document.getElementById(&#39;zoom&#39;).style.fontSize&#x3D;size+&#39;px&#39;;&#125;</span><br><span class="line">&lt;&#x2F;SCRIPT&gt;</span><br><span class="line">&lt;META name&#x3D;GENERATOR content&#x3D;&quot;MSHTML 8.00.7600.16700&quot;&gt;</span><br><span class="line">&lt;&#x2F;HEAD&gt;</span><br><span class="line">&lt;BODY</span><br><span class="line">&lt;TABLE border&#x3D;0 cellSpacing&#x3D;0 cellPadding&#x3D;0 width&#x3D;778 align&#x3D;center&gt;</span><br><span class="line">&lt;TBODY&gt;</span><br><span class="line">&lt;TR&gt;&lt;TD colSpan&#x3D;2&gt;&lt;IMG src&#x3D;&quot;http:&#x2F;&#x2F;www.stats.gov.cn&#x2F;images&#x2F;banner.jpg&quot; width&#x3D;778 height&#x3D;135&gt;&lt;&#x2F;TD&gt;&lt;&#x2F;TR&gt;&lt;&#x2F;TBODY&gt;&lt;&#x2F;TABLE&gt;&lt;MAP id&#x3D;Map name&#x3D;Map&gt;&lt;AREA href&#x3D;&quot;http:&#x2F;&#x2F;www.stats.gov.cn&#x2F;english&#x2F;&quot; shape&#x3D;rect coords&#x3D;277,4,328,18&gt;&lt;AREA href&#x3D;&quot;http:&#x2F;&#x2F;www.stats.gov.cn:82&#x2F;&quot; shape&#x3D;rect coords&#x3D;181,4,236,18&gt;&lt;AREA href&#x3D;&quot;http:&#x2F;&#x2F;www.stats.gov.cn&#x2F;&quot; shape&#x3D;rect coords&#x3D;85,4,140,17&gt;&lt;&#x2F;MAP&gt;&lt;TABLE border&#x3D;0 cellSpacing&#x3D;0 cellPadding&#x3D;0 width&#x3D;778 align&#x3D;center&gt;&lt;TBODY&gt;&lt;TR&gt;&lt;TD vAlign&#x3D;top&gt;&lt;TABLE style&#x3D;&quot;MARGIN-TOP: 15px; MARGIN-BOTTOM: 18px&quot; border&#x3D;0 cellSpacing&#x3D;0 cellPadding&#x3D;0 width&#x3D;&quot;100%&quot; align&#x3D;center&gt;&lt;TBODY&gt;&lt;TR&gt;&lt;TD style&#x3D;&quot; BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: 50% top&quot; background&#x3D;images&#x2F;topLine.gif align&#x3D;right&gt;&lt;&#x2F;TD&gt;&lt;&#x2F;TR&gt;&lt;TR&gt;&lt;TD style&#x3D;&quot; BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: right 50%&quot; vAlign&#x3D;top background&#x3D;images&#x2F;rightBorder.gif&gt;&lt;TABLE border&#x3D;0 cellSpacing&#x3D;0 cellPadding&#x3D;0 width&#x3D;&quot;100%&quot;&gt;&lt;TBODY&gt;&lt;TR&gt;&lt;TD width&#x3D;&quot;1%&quot; height&#x3D;&quot;200&quot; vAlign&#x3D;top&gt;</span><br><span class="line">&lt;table class&#x3D;&#39;provincetable&#39; width&#x3D;775 &gt;&lt;tr &gt;&lt;td colspan&#x3D;8  height&#x3D;1 style&#x3D;&#39;FONT-SIZE: 5px&#39; &gt;&amp;nbsp;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;</span><br><span class="line">&lt;tr class&#x3D;&#39;provincehead&#39;&gt;&lt;td  colspan&#x3D;8 align&#x3D;&#39;center&#39; style&#x3D;&#39;FONT-SIZE: 16px&#39; height&#x3D;39 vAlign&#x3D;&#39;center&#39; background&#x3D;&#39;images&#x2F;tiao.jpg&#39;&gt;</span><br><span class="line">&lt;strong&gt;关于更新全国统计用区划代码和城乡划分代码的公告&lt;&#x2F;strong&gt;&lt;&#x2F;td&gt;</span><br><span class="line">&lt;&#x2F;tr&gt;   &lt;tr &gt;</span><br><span class="line">  &lt;td colspan&#x3D;8  height&#x3D;50 style&#x3D;&#39;FONT-SIZE: 12px&#39; &gt; 　　为更好满足2020年常规统计调查和专项调查的需要，国家统计局组织开展了2019年度统计用区划代码和城乡划分代码更新维护工作，调查时点为2019年10月31日。目前，已完成更新维护工作,现予公布。</span><br><span class="line">  &lt;br&gt; 　　2019年统计用区划代码和城乡划分代码依据国务院批复同意的《关于统计上划分城乡的规定》（国函〔2008〕60号）及国家统计局印发的《统计用区划代码和城乡划分代码编制规则》（国统字〔2009〕91号）编制。</span><br><span class="line">  &lt;br&gt; 　　此次发布内容为2019年全国统计用区划代码（12位）和城乡分类代码（3位），地域范围为国家统计局开展统计调查的全国31个省、自治区、直辖市，未包括我国台湾省、香港特别行政区、澳门特别行政区。</span><br><span class="line">  &lt;br&gt; 　　《关于统计上划分城乡的规定》指出：“本规定作为统计上划分城乡的依据，不改变现有的行政区划、隶属关系、管理权限和机构编制，以及土地规划、城乡规划等有关规定”。统计用区划代码和城乡划分代码，在统计工作中应当使用，需要在其他工作中使用时，请务必结合有关实际情况。</span><br><span class="line">  &lt;&#x2F;td&gt;</span><br><span class="line">&lt;&#x2F;tr&gt;</span><br><span class="line">&lt;tr class&#x3D;&#39;provincetr&#39;&gt;&lt;td&gt;&lt;a href&#x3D;&#39;11.html&#39;&gt;北京市&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;12.html&#39;&gt;天津市&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;13.html&#39;&gt;河北省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;14.html&#39;&gt;山西省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;15.html&#39;&gt;内蒙古自治区&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;21.html&#39;&gt;辽宁省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;22.html&#39;&gt;吉林省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;23.html&#39;&gt;黑龙江省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;</span><br><span class="line">&lt;tr class&#x3D;&#39;provincetr&#39;&gt;&lt;td&gt;&lt;a href&#x3D;&#39;31.html&#39;&gt;上海市&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;32.html&#39;&gt;江苏省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;33.html&#39;&gt;浙江省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;34.html&#39;&gt;安徽省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;35.html&#39;&gt;福建省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;36.html&#39;&gt;江西省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;37.html&#39;&gt;山东省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;41.html&#39;&gt;河南省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;</span><br><span class="line">&lt;tr class&#x3D;&#39;provincetr&#39;&gt;&lt;td&gt;&lt;a href&#x3D;&#39;42.html&#39;&gt;湖北省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;43.html&#39;&gt;湖南省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;44.html&#39;&gt;广东省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;45.html&#39;&gt;广西壮族自治区&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;46.html&#39;&gt;海南省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;50.html&#39;&gt;重庆市&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;51.html&#39;&gt;四川省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;52.html&#39;&gt;贵州省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;</span><br><span class="line">&lt;tr class&#x3D;&#39;provincetr&#39;&gt;&lt;td&gt;&lt;a href&#x3D;&#39;53.html&#39;&gt;云南省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;54.html&#39;&gt;西藏自治区&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;61.html&#39;&gt;陕西省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;62.html&#39;&gt;甘肃省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;63.html&#39;&gt;青海省&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;64.html&#39;&gt;宁夏回族自治区&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;a href&#x3D;&#39;65.html&#39;&gt;新疆维吾尔自治区&lt;br&#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;td&gt;&lt;td&gt;&lt;br&#x2F;&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;table&gt;</span><br><span class="line">&lt;&#x2F;TD&gt;</span><br><span class="line">&lt;&#x2F;TR&gt;</span><br><span class="line">&lt;&#x2F;TBODY&gt;</span><br><span class="line">&lt;&#x2F;TABLE&gt;</span><br><span class="line">&lt;&#x2F;TD&gt;</span><br><span class="line">&lt;&#x2F;TR&gt;</span><br><span class="line">&lt;TR&gt;</span><br><span class="line">&lt;TD style&#x3D;&quot;BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: 50% top&quot;          background&#x3D;images&#x2F;borderBottom.gif&gt;</span><br><span class="line">&lt;&#x2F;TD&gt;&lt;&#x2F;TR&gt;&lt;&#x2F;TBODY&gt;</span><br><span class="line">&lt;&#x2F;TABLE&gt;&lt;&#x2F;TD&gt;&lt;&#x2F;TR&gt;  &lt;TR&gt;    &lt;TD bgColor&#x3D;#e2eefc height&#x3D;2&gt;&lt;&#x2F;TD&gt;&lt;&#x2F;TR&gt;  &lt;TR&gt;</span><br><span class="line">&lt;TD class&#x3D;STYLE3 height&#x3D;60&gt;</span><br><span class="line">&lt;DIV align&#x3D;center style&#x3D;&quot;background-color:#1E67A7; height:75px; color:#fff;&quot;&gt;&lt;br&#x2F;&gt;</span><br><span class="line">版权所有：国家统计局　　&lt;A class&#x3D;STYLE3       href&#x3D;&quot;http:&#x2F;&#x2F;www.miibeian.gov.cn&#x2F;&quot;       target&#x3D;_blank&gt;京ICP备05034670号&lt;&#x2F;A&gt;&lt;BR&gt;&lt;BR&gt;地址：北京市西城区月坛南街57号（100826）&lt;BR&gt;&lt;&#x2F;DIV&gt;&lt;&#x2F;TD&gt;&lt;&#x2F;TR&gt;&lt;&#x2F;TBODY&gt;&lt;&#x2F;TABLE&gt;&lt;&#x2F;BODY&gt;&lt;&#x2F;HTML&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line">pattern &#x3D; &quot;&#39;\d&#123;2&#125;\.html&#39;&gt;(.*?)&lt;br&#x2F;&gt;&quot;</span><br><span class="line">provinces &#x3D; re.findall(pattern, html)</span><br><span class="line">print(provinces)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(len(provinces))</span><br><span class="line">[&#39;北京市&#39;, &#39;天津市&#39;, &#39;河北省&#39;, &#39;山西省&#39;, &#39;内蒙古自治区&#39;, &#39;辽宁省&#39;, &#39;吉林省&#39;, &#39;黑龙江省&#39;, &#39;上海市&#39;, &#39;江苏省&#39;, &#39;浙江省&#39;, &#39;安徽省&#39;, &#39;福建省&#39;, &#39;江西省&#39;, &#39;山东省&#39;, &#39;河南省&#39;, &#39;湖北省&#39;, &#39;湖南省&#39;, &#39;广东省&#39;, &#39;广西壮族自治区&#39;, &#39;海南省&#39;, &#39;重庆市&#39;, &#39;四川省&#39;, &#39;贵州省&#39;, &#39;云南省&#39;, &#39;西藏自治区&#39;, &#39;陕西省&#39;, &#39;甘肃省&#39;, &#39;青海省&#39;, &#39;宁夏回族自治区&#39;, &#39;新疆维吾尔自治区&#39;]</span><br><span class="line">31</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pattern &#x3D; &quot;&lt;a\shref&#x3D;&#39;(\d&#123;2&#125;\.html)&#39;&gt;&quot;</span><br><span class="line">hrefs &#x3D; re.findall(pattern, html)</span><br><span class="line">print(hrefs)</span><br><span class="line">print(len(hrefs))</span><br><span class="line">[&#39;11.html&#39;, &#39;12.html&#39;, &#39;13.html&#39;, &#39;14.html&#39;, &#39;15.html&#39;, &#39;21.html&#39;, &#39;22.html&#39;, &#39;23.html&#39;, &#39;31.html&#39;, &#39;32.html&#39;, &#39;33.html&#39;, &#39;34.html&#39;, &#39;35.html&#39;, &#39;36.html&#39;, &#39;37.html&#39;, &#39;41.html&#39;, &#39;42.html&#39;, &#39;43.html&#39;, &#39;44.html&#39;, &#39;45.html&#39;, &#39;46.html&#39;, &#39;50.html&#39;, &#39;51.html&#39;, &#39;52.html&#39;, &#39;53.html&#39;, &#39;54.html&#39;, &#39;61.html&#39;, &#39;62.html&#39;, &#39;63.html&#39;, &#39;64.html&#39;, &#39;65.html&#39;]</span><br><span class="line">31</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for item in zip(provinces, hrefs):</span><br><span class="line">    print(item)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">(&#39;北京市&#39;, &#39;11.html&#39;)</span><br><span class="line">(&#39;天津市&#39;, &#39;12.html&#39;)</span><br><span class="line">(&#39;河北省&#39;, &#39;13.html&#39;)</span><br><span class="line">(&#39;山西省&#39;, &#39;14.html&#39;)</span><br><span class="line">(&#39;内蒙古自治区&#39;, &#39;15.html&#39;)</span><br><span class="line">(&#39;辽宁省&#39;, &#39;21.html&#39;)</span><br><span class="line">(&#39;吉林省&#39;, &#39;22.html&#39;)</span><br><span class="line">(&#39;黑龙江省&#39;, &#39;23.html&#39;)</span><br><span class="line">(&#39;上海市&#39;, &#39;31.html&#39;)</span><br><span class="line">(&#39;江苏省&#39;, &#39;32.html&#39;)</span><br><span class="line">(&#39;浙江省&#39;, &#39;33.html&#39;)</span><br><span class="line">(&#39;安徽省&#39;, &#39;34.html&#39;)</span><br><span class="line">(&#39;福建省&#39;, &#39;35.html&#39;)</span><br><span class="line">(&#39;江西省&#39;, &#39;36.html&#39;)</span><br><span class="line">(&#39;山东省&#39;, &#39;37.html&#39;)</span><br><span class="line">(&#39;河南省&#39;, &#39;41.html&#39;)</span><br><span class="line">(&#39;湖北省&#39;, &#39;42.html&#39;)</span><br><span class="line">(&#39;湖南省&#39;, &#39;43.html&#39;)</span><br><span class="line">(&#39;广东省&#39;, &#39;44.html&#39;)</span><br><span class="line">(&#39;广西壮族自治区&#39;, &#39;45.html&#39;)</span><br><span class="line">(&#39;海南省&#39;, &#39;46.html&#39;)</span><br><span class="line">(&#39;重庆市&#39;, &#39;50.html&#39;)</span><br><span class="line">(&#39;四川省&#39;, &#39;51.html&#39;)</span><br><span class="line">(&#39;贵州省&#39;, &#39;52.html&#39;)</span><br><span class="line">(&#39;云南省&#39;, &#39;53.html&#39;)</span><br><span class="line">(&#39;西藏自治区&#39;, &#39;54.html&#39;)</span><br><span class="line">(&#39;陕西省&#39;, &#39;61.html&#39;)</span><br><span class="line">(&#39;甘肃省&#39;, &#39;62.html&#39;)</span><br><span class="line">(&#39;青海省&#39;, &#39;63.html&#39;)</span><br><span class="line">(&#39;宁夏回族自治区&#39;, &#39;64.html&#39;)</span><br><span class="line">(&#39;新疆维吾尔自治区&#39;, &#39;65.html&#39;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/python%E4%BD%9C%E4%B8%9A%E4%BA%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -818,118 +882,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/21/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F.jpg">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/21/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">字符串类型</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-04-21 17:43:39 / Modified: 18:10:11" itemprop="dateCreated datePublished" datetime="2020-04-21T17:43:39+08:00">2020-04-21</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h2><p>   字符串是 Python 数据类型的一种，就是由零个或多个字符组成的有限序列，从名字我们就可以知道字符串就是一串<br>字符，在 Python 中被一对引号括起来的就是字符串，引号可以是单引号，也可以是双引号，但是必须是英文下的引号。</p>
-<p>写一个自我介绍</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">"托尼"</span> </span><br><span class="line">age = <span class="string">"20"</span> </span><br><span class="line">profession = <span class="string">"理发师"</span> </span><br><span class="line">print(<span class="string">"我的名字叫"</span> + name + <span class="string">"，我的年龄是"</span> + age + <span class="string">"，我的职业是"</span> + profession + <span class="string">"。"</span>)</span><br></pre></td></tr></table></figure>
-<p>运行代码，可以看到自我介绍已经被输出出来了。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我的名字叫托尼，我的年龄是<span class="number">20</span>，我的职业是理发师。</span><br></pre></td></tr></table></figure>
-<p>   上面的代码使用了字符串的拼接方法，在 Python 中要拼接字符串只需要使用加号 + 或者 , 就能将不同的字符串拼<br>接起来。</p>
-<h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><p>写一个自我介绍</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">"托尼"</span> </span><br><span class="line">age = <span class="string">"20"</span> </span><br><span class="line">profession = <span class="string">"理发师"</span> </span><br><span class="line">print(<span class="string">"我的名字叫%s，我的年龄是%s，我的职业是%s。"</span> % (name, age, profession))</span><br></pre></td></tr></table></figure>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>   我们在对变量赋值的时候赋值符号 (=) 右边的变量值如果加上引号才会是一个字符串变量，如果不加引号并且变量<br>值不是一个数字的话程序就可能报错</p>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>   通常使用井符号 # 将代码屏蔽掉，意思就是井号后面的内容都会被Python解释器忽略。这样的功能<br>叫 注释 。不同的编程语言，注释的标识可能不同。</p>
-<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符 \"></a>转义字符 \</h3><p>   “转义字符” 顾名思义就是能将字符意思改变的符号，转义字符 \ 可以转义很多字符，比如 \n 表示换行， \t 表示<br>制表符，字符 \ 本身也要转义，所以 \ 表示的字符就是 \ 。</p>
-<p>   如果字符串里面有很多字符都需要转义，就需要加很多 \ ，为了简化，Python还允许用 r”” 表示 “” 内部的字符串<br>默认不转义</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"I'm \\tlearning \\sPython"</span>) </span><br><span class="line">print(<span class="string">r"I'm \tlearning \sPython"</span>)</span><br></pre></td></tr></table></figure>
-<p>保存后运行代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">I<span class="string">'m \tlearning \sPython </span></span><br><span class="line"><span class="string">I'</span>m \tlearning \sPython</span><br></pre></td></tr></table></figure>
-<h3 id="三重引号"><a href="#三重引号" class="headerlink" title="三重引号"></a>三重引号</h3><p>   如果字符串内部有很多换行，用 \n 写在一行里不好阅读，为了简化，Python允许用 ‘’’…’’’ 或 “””…””” 的格<br>式表示多行内容</p>
-<p>   在使用print()进行输出的时候，输出的结果总是自动换行，因为在print()函数中，有一个默认的参数 end=\n ，如果不<br>希望输出的结果直接换行，可以将这个参数改变</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Hello,Python"</span>, end=<span class="string">"\t"</span>) </span><br><span class="line">print(<span class="string">"Hello,World"</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="获取字符长度"><a href="#获取字符长度" class="headerlink" title="获取字符长度"></a>获取字符长度</h3><p>len() 函数获取字符串的长度，len()函数我们会经常使用。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello python"</span> </span><br><span class="line">print(string) </span><br><span class="line">print(<span class="string">"字符串的长度是"</span>, len(string))</span><br></pre></td></tr></table></figure>
-<h3 id="strip-删除开头或结尾空白字符"><a href="#strip-删除开头或结尾空白字符" class="headerlink" title="strip()删除开头或结尾空白字符"></a>strip()删除开头或结尾空白字符</h3><p>如果字符串的开头和结尾都有空白字符，那么都会删除</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">' helllo '</span> </span><br><span class="line">print(string.strip())</span><br></pre></td></tr></table></figure>
-<h3 id="count-获取某个字符在字符串出现的次数"><a href="#count-获取某个字符在字符串出现的次数" class="headerlink" title="count()获取某个字符在字符串出现的次数"></a>count()获取某个字符在字符串出现的次数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello python"</span> </span><br><span class="line">print(<span class="string">"字符o的次数是："</span>,string.count(<span class="string">'o'</span>))</span><br></pre></td></tr></table></figure>
-<h3 id="replace-oldstr-newstr-字符串替换"><a href="#replace-oldstr-newstr-字符串替换" class="headerlink" title="replace(oldstr,newstr)字符串替换"></a>replace(oldstr,newstr)字符串替换</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello python"</span> </span><br><span class="line">new_str = string.replace(<span class="string">'h'</span>,<span class="string">"H"</span>) </span><br><span class="line">print(new_str)</span><br></pre></td></tr></table></figure>
-<h3 id="format-字符串格式化"><a href="#format-字符串格式化" class="headerlink" title="format()字符串格式化"></a>format()字符串格式化</h3><p>除了使用 % ，还可以使用format对字符串进行格式化</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">'hello&#123;&#125;'</span> </span><br><span class="line">new_str = string.format(<span class="string">'你好'</span>) </span><br><span class="line">print(new_str)</span><br></pre></td></tr></table></figure>
-<h3 id="split-字符串的分割"><a href="#split-字符串的分割" class="headerlink" title="split()字符串的分割"></a>split()字符串的分割</h3><p>如果括号中不添加参数，那么默认以空格作为分隔符</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello world"</span> </span><br><span class="line">print(string.split(<span class="string">" "</span>))</span><br></pre></td></tr></table></figure>
-<p>注意：分割字符串返回是一个列表，列表里面就是分割的字符串</p>
-<h3 id="join-连接字符串"><a href="#join-连接字符串" class="headerlink" title="join()连接字符串"></a>join()连接字符串</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"hello"</span></span><br><span class="line">new_str = <span class="string">'你好'</span>.join(string)</span><br><span class="line">print(new_str)</span><br></pre></td></tr></table></figure>
-<h3 id="字符串相加，字符串相乘"><a href="#字符串相加，字符串相乘" class="headerlink" title="字符串相加，字符串相乘"></a>字符串相加，字符串相乘</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"hello"</span> </span><br><span class="line">str2 = <span class="string">"world"</span> </span><br><span class="line">new_str1 = str1 + str2 </span><br><span class="line">new_str2 = str1 * <span class="number">3</span> </span><br><span class="line">print(new_str1) </span><br><span class="line">print(new_str2)</span><br></pre></td></tr></table></figure>
-<p>可以发现：字符串和字符串相加只是拼接字符串，而字符串和数字相乘则是复制三个相同的字符串</p>
-<h3 id="字符串下标"><a href="#字符串下标" class="headerlink" title="字符串下标"></a>字符串下标</h3><p>想要取出字符串中特定位置的字符，可以使用字符串的下标</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"abc1234567"</span> </span><br><span class="line">new_str = string[<span class="number">2</span>] </span><br><span class="line">print(new_str)</span><br></pre></td></tr></table></figure>
-<h3 id="字符串切片"><a href="#字符串切片" class="headerlink" title="字符串切片"></a>字符串切片</h3><p>从指定的开始索引到指定的结束索引，即：[start:end:step]</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="string">"abc1234567"</span></span><br><span class="line">print(string[<span class="number">2</span>:<span class="number">5</span>]) </span><br><span class="line">print(string[<span class="number">2</span>:]) </span><br><span class="line">print(string[<span class="number">2</span>::<span class="number">2</span>]) </span><br><span class="line">print(string[::<span class="number">2</span>]) </span><br><span class="line">print(string[::<span class="number">-1</span>]) </span><br><span class="line">print(string[<span class="number">-3</span>:<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1002,7 +954,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
